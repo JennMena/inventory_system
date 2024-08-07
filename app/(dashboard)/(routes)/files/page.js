@@ -5,7 +5,6 @@ function Files() {
   //OR afterSignOutUrl
   return (
     <div>Files
-      <UserButton afterSwitchSessionUrl='/' />
     </div>
   )
 }
