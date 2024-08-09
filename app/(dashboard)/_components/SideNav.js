@@ -1,5 +1,5 @@
 "use client"
-import { BellRing, FolderOpen, ImageUp, Shield, ShoppingBag } from 'lucide-react';
+import { BellRing, CirclePlus, FolderOpen, ImageUp, PackageOpen, Shield, ShoppingBag } from 'lucide-react';
 import Image from 'next/image'
 import Link from 'next/link'
 import React, { useState } from 'react'
@@ -8,30 +8,24 @@ function SideNav({ closeSideBar }) {
     const menuList = [
         {
             id: 1,
-            name: 'Upload',
-            icon: ImageUp,
+            name: 'Add items',
+            icon: CirclePlus,
             path: '/upload'
         },
         {
             id: 2,
-            name: 'Files',
-            icon: FolderOpen,
-            path: '/files'
+            name: 'My Stock List',
+            icon: PackageOpen,
+            path: '/stock-list'
         },
         {
             id: 3,
-            name: 'Upgrade',
-            icon: Shield,
-            path: '/upgrade'
-        },
-        {
-            id: 4,
             name: 'Remainders',
             icon: BellRing,
             path: '/remainders'
         },
         {
-            id: 5,
+            id: 6,
             name: 'Shopping List',
             icon: ShoppingBag,
             path: '/shopping-list'

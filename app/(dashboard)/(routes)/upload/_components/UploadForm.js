@@ -19,6 +19,7 @@ function UploadForm({ uploadClick, progress, showAlert}) {
 
     return (
         <div className='p-5 px-8 md:px-28 text-center'>
+            <h3 className='text-xl mb-4 font-bold'>Or upload a photo for easier logging</h3>
 
             <div className="flex items-center justify-center w-full">
                 <label for="dropzone-file" className="flex flex-col items-center justify-center w-full h-64 border-2 border-blue-300 border-dashed rounded-lg cursor-pointer bg-blue-50 dark:hover:bg-gray-800 dark:bg-gray-700 hover:bg-blue-100 dark:border-gray-600 dark:hover:border-gray-500">
@@ -37,9 +38,9 @@ function UploadForm({ uploadClick, progress, showAlert}) {
             {errorMessage ? <AlertMsg msg={errorMessage} /> : null}
             {file ? <FilePreview file={file} removeFile={() => setFile(null)} /> : null}
             {showAlert && progress > 0 ? <ProgressBar progress={progress} /> : null}
-            {showAlert == false || progress > 0 ? <button disabled={!file} className='p-2 bg-primary text-white w-[30%] rounded-full mt-5 disabled:bg-gray-400' onClick={() => {uploadClick(file); setFile(null)}}>
+            {showAlert == false || progress > 0 ? <div className="flex justify-center mt-5"><button disabled={!file} className='p-2 bg-primary text-white w-[30%] rounded-full disabled:bg-gray-400' onClick={() => {uploadClick(file); setFile(null)}}>
                 Upload
-            </button> : null}
+            </button></div> : null}
 
 
         </div>
